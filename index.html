@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storytelling</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://i.stack.imgur.com/SvWWN.png');
+    /* Đường dẫn đến hình ảnh nền */
+    background-size: cover;
+    /* Chỉnh kích thước hình ảnh để phủ toàn bộ nền */
+    background-position: center;
+    /* Căn giữa hình ảnh */
+  }
+
+  .story-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Màu nền của khung chứa nội dung */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .page,
+  .page-end {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Màu nền của mỗi trang */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .page-end {
+    display: none;
+  }
+
+  .page-end p {
+    font-size: 24px;
+    color: #555;
+  }
+
+  #story-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #008000;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .story-container {
+      width: 80%;
+      margin-top: 60%;
+    }
+  }
+</style>
+
+<body>
+
+  <div class="story-container">
+    <div class="page animate__animated animate__fadeIn">
+      <p id="story-text"></p>
+    </div>
+    <div class="page-end">
+      <p>The End</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const storyTexts = [
+        "Once upon a time...",
+        "There was a brave knight...",
+        "Who embarked on an epic quest...",
+        "To save the kingdom from a fearsome dragon...",
+        // Add more story texts here 
+      ];
+
+      const storyContainer = document.querySelector('.story-container');
+      const page = document.querySelector('.page');
+      const pageEnd = document.querySelector('.page-end');
+      const storyText = document.querySelector('#story-text');
+
+      let currentIndex = 0;
+
+      function showNextPage() {
+        if (currentIndex < storyTexts.length) {
+          storyText.textContent = storyTexts[currentIndex];
+          currentIndex++;
+          page.style.display = 'block';
+          setTimeout(() => {
+            //page.classList.add('animate__animated', 'animate__fadeOut'); 
+            setTimeout(() => {
+              page.style.display = 'none';
+              showNextPage();
+            }, 1000); // Delay before hiding the page 
+          }, 4000); // Display each page for 4 seconds 
+        } else {
+          page.style.display = 'none'; // Hide the current page 
+          pageEnd.style.display = 'block'; // Show the end page 
+        }
+      }
+
+      showNextPage();
+    });
+
+
+
+  </script>
+</body>
+
+</html>
