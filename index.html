@@ -69,7 +69,7 @@
   .story-container {
     position: relative;
     width: auto;
-    height: 270px;
+    height: 300px;
     /* Điều chỉnh chiều cao theo nhu cầu */
     background-color: #f0f0f0;
     /* Màu nền tùy chọn */
@@ -90,7 +90,6 @@
   }
 
 
-
   @keyframes walkAcross {
     from {
       left: 0;
@@ -106,27 +105,30 @@
 
   <div class="story-container">
     <div class="character"></div> <!-- Nhân vật hoạt hình -->
-
     <div class="page animate__animated animate__fadeIn">
-      <p id="story-text"></p>
+      <p id="story-text">To save the kingdom from a fearsome dragon..."</p>
     </div>
     <div class="page-end">
-      <p>The End</p>
+      <p><img style="width:250px" src="https://c.tenor.com/5Xgt3Phtx64AAAAC/tenor.gif"></p>
     </div>
   </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const storyTexts = [
-        "Once upon a time...",
-        "There was a brave knight...",
-        "Who embarked on an epic quest...",
-        "To save the kingdom from a fearsome dragon...",
+        "Chào bạn ...",
+        "Mình tên là Kim Long...",
+        "Mình cũng ở Kbang...",
+        "Chắc là bạn không biết mình",
+        "Mình biết bạn trên FB và thấy bạn bên ngoài vài lần",
+        "Mình nhắn tin này là để làm quen với bạn",
+        "Mong là bạn sẽ không chê tin nhắn này của mình :)"
         // Add more story texts here 
       ];
 
       const storyContainer = document.querySelector('.story-container');
       const page = document.querySelector('.page');
+      const chac = document.querySelector('.character');
       const pageEnd = document.querySelector('.page-end');
       const storyText = document.querySelector('#story-text');
 
@@ -146,6 +148,7 @@
           }, 4000); // Display each page for 4 seconds 
         } else {
           page.style.display = 'none'; // Hide the current page 
+          chac.style.display = 'none';
           pageEnd.style.display = 'block'; // Show the end page 
         }
       }
