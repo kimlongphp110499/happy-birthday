@@ -65,11 +65,47 @@
       margin-top: 60%;
     }
   }
+
+  .story-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* Điều chỉnh chiều cao theo nhu cầu */
+    background-color: #f0f0f0;
+    /* Màu nền tùy chọn */
+  }
+
+  .character {
+    width: 70px;
+    /* Điều chỉnh để phù hợp với kích thước của GIF */
+    height: 70px;
+    /* Điều chỉnh để phù hợp với kích thước của GIF */
+    background-image: url('https://media.tenor.com/Kktm4jxbAc8AAAAi/bubu-walk.gif');
+    background-size: cover;
+    /* Đảm bảo GIF phủ kín kích thước của .character */
+    position: absolute;
+    bottom: 0;
+    animation: walkAcross 5s infinite linear;
+    /* Gọi hoạt ảnh */
+  }
+
+
+  @keyframes walkAcross {
+    from {
+      left: 0;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
 </style>
 
 <body>
 
   <div class="story-container">
+    <div class="character"></div> <!-- Nhân vật hoạt hình -->
+
     <div class="page animate__animated animate__fadeIn">
       <p id="story-text"></p>
     </div>
