@@ -213,81 +213,81 @@ $( ".lammoipopupnhantien" ).hover(
               'outerRadius': 4,
           }
       });
-       let theWheel = new Winwheel({
-          'outerRadius': 220, // Bán kính ngoài
-          'innerRadius': 0, // Size lỗ trung tâm
-          'textFontSize': 24, // Size chữ
-          'textOrientation': 'horizontal', // Chữ nằm ngang
-          'textAlignment': 'outer', // Căn chỉnh văn bản ra bên ngoài bánh xe.
-          'numSegments': 8, // Số ô
-          'responsive': true,
-          'segments': [{
-              'fillStyle': '#910f06',
-              'text': 'Quà số 1',//50000
-              'size': winwheelPercentToDegrees(24),
-              'textFontSize': 30,
-              'textFillStyle': '#ffffff'
-          }, {
-              'fillStyle': '#ab6f03',
-              'text': 'Quà số 2',//100000
-              'size': winwheelPercentToDegrees(20),
-              'textFontSize': 28,
-              'textFillStyle': '#ffffff'
-          }, {
-              'fillStyle': '#910f06',
-              'text': 'Quà số 3',//150000
-              'size': winwheelPercentToDegrees(15),
-              'textFontSize': 26,
-              'textFillStyle': '#ffffff'
-          }, {
-              'fillStyle': '#ab6f03',
-              'text': 'Quà số 4',//200000
-              'size': winwheelPercentToDegrees(15),
-              'textFontSize': 24,
-              'textFillStyle': '#ffffff'
-          }, {
-              'fillStyle': '#910f06',
-              'text': 'Quà số 4',//250000
-              'size': winwheelPercentToDegrees(12),
-              'textFontSize': 22,
-              'textFillStyle': '#ffffff'
-          }, {
-              'fillStyle': '#ab6f03',
-              'text': 'Quà số 5',//300000
-              'size': winwheelPercentToDegrees(10),
-              'textFontSize': 20,
-              'textFillStyle': '#ffffff'
-          }, {
-              'fillStyle': '#910f06',
-              'text': 'Quà số 6',//350000
-              'size': winwheelPercentToDegrees(3),
-              'textFontSize': 18,
-              'textFillStyle': '#ffffff'
-          }, {
-              'fillStyle': '#ab6f03',
-              'text': 'Đặc biệt',
-              'size': winwheelPercentToDegrees(3),
-              'textFontSize': 16,
-              'textFillStyle': '#ffffff'
-          }],
-          'animation': // Chỉ định hình động để sử dụng.
-          {
-              'type': 'spinToStop',
-              'duration': 20, // Thời lượng tính bằng giây.
-              'spins': 10, // Số vòng quay hoàn chỉnh mặc định.
-              'callbackFinished': alertPrize,
-              'callbackSound': playSound, // Chức năng gọi khi âm thanh đánh dấu được kích hoạt.
-              'soundTrigger': 'pin', // Chỉ định các chân là để kích hoạt âm thanh, tùy chọn khác là 'phân đoạn'.
-              'type'             : 'spinToStop',
-              'duration'         : 9,
-          },
-          'pins': {
-              'number': 8, // Số lượng chân. Họ không gian đều xung quanh bánh xe.
-              'responsive': true,
-              'fillStyle': 'silver',
-              'outerRadius': 4,
-          }
-      });
+      //  let theWheel = new Winwheel({
+      //     'outerRadius': 220, // Bán kính ngoài
+      //     'innerRadius': 0, // Size lỗ trung tâm
+      //     'textFontSize': 24, // Size chữ
+      //     'textOrientation': 'horizontal', // Chữ nằm ngang
+      //     'textAlignment': 'outer', // Căn chỉnh văn bản ra bên ngoài bánh xe.
+      //     'numSegments': 8, // Số ô
+      //     'responsive': true,
+      //     'segments': [{
+      //         'fillStyle': '#910f06',
+      //         'text': 'Quà số 1',//50000
+      //         'size': winwheelPercentToDegrees(24),
+      //         'textFontSize': 30,
+      //         'textFillStyle': '#ffffff'
+      //     }, {
+      //         'fillStyle': '#ab6f03',
+      //         'text': 'Quà số 2',//100000
+      //         'size': winwheelPercentToDegrees(20),
+      //         'textFontSize': 28,
+      //         'textFillStyle': '#ffffff'
+      //     }, {
+      //         'fillStyle': '#910f06',
+      //         'text': 'Quà số 3',//150000
+      //         'size': winwheelPercentToDegrees(15),
+      //         'textFontSize': 26,
+      //         'textFillStyle': '#ffffff'
+      //     }, {
+      //         'fillStyle': '#ab6f03',
+      //         'text': 'Quà số 4',//200000
+      //         'size': winwheelPercentToDegrees(15),
+      //         'textFontSize': 24,
+      //         'textFillStyle': '#ffffff'
+      //     }, {
+      //         'fillStyle': '#910f06',
+      //         'text': 'Quà số 4',//250000
+      //         'size': winwheelPercentToDegrees(12),
+      //         'textFontSize': 22,
+      //         'textFillStyle': '#ffffff'
+      //     }, {
+      //         'fillStyle': '#ab6f03',
+      //         'text': 'Quà số 5',//300000
+      //         'size': winwheelPercentToDegrees(10),
+      //         'textFontSize': 20,
+      //         'textFillStyle': '#ffffff'
+      //     }, {
+      //         'fillStyle': '#910f06',
+      //         'text': 'Quà số 6',//350000
+      //         'size': winwheelPercentToDegrees(3),
+      //         'textFontSize': 18,
+      //         'textFillStyle': '#ffffff'
+      //     }, {
+      //         'fillStyle': '#ab6f03',
+      //         'text': 'Đặc biệt',
+      //         'size': winwheelPercentToDegrees(3),
+      //         'textFontSize': 16,
+      //         'textFillStyle': '#ffffff'
+      //     }],
+      //     'animation': // Chỉ định hình động để sử dụng.
+      //     {
+      //         'type': 'spinToStop',
+      //         'duration': 20, // Thời lượng tính bằng giây.
+      //         'spins': 10, // Số vòng quay hoàn chỉnh mặc định.
+      //         'callbackFinished': alertPrize,
+      //         'callbackSound': playSound, // Chức năng gọi khi âm thanh đánh dấu được kích hoạt.
+      //         'soundTrigger': 'pin', // Chỉ định các chân là để kích hoạt âm thanh, tùy chọn khác là 'phân đoạn'.
+      //         'type'             : 'spinToStop',
+      //         'duration'         : 9,
+      //     },
+      //     'pins': {
+      //         'number': 8, // Số lượng chân. Họ không gian đều xung quanh bánh xe.
+      //         'responsive': true,
+      //         'fillStyle': 'silver',
+      //         'outerRadius': 4,
+      //     }
+      // });
       
       // Vars được sử dụng bởi mã trong trang này để thực hiện các điều khiển nguồn.
       let wheelPower = 13;
